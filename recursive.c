@@ -6,19 +6,19 @@
 /*recursive*/
 
 long fibonacci(int);
-long a[N];
 
 long fibonacci(i)
 {
-    a[0] = 0;
-    a[1] = 1;
+
     if (i == 0)
-        return(a[i]);
+        return(0);
     else if (i == 1)
-        return(a[i]);
+        return(1);
     else
-        a[i] = a[i - 2] + a[i - 1];
-        return(a[i]);
+    {
+        int a = fibonacci(i-1) + fibonacci(i-2);
+        return(a);
+    }
 }
 
 int main(void)
@@ -28,17 +28,17 @@ int main(void)
     
     clock_t begin, end;
     double time_spent;
-    begin == clock();
-
-    for(i = 0; i < N; i++)
+    begin = clock();
+   
+    for (i = 0; i < N; i++)
     {
         l = fibonacci(i);
         printf("%4d %20ld\n", i, l);
     }
-
+    
     end = clock();
     time_spent = (double)(end - begin) / CLOCKS_PER_SEC;
     printf("%f sec\n", time_spent);
-
-    return(0);
+    
+    return 0;
 }
