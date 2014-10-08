@@ -9,19 +9,27 @@ long fibonacci(int);
 int a = 0;
 int b = 1;
 
-long fibonacci(i)
+long fibonacci(j)
 {
-    if (i == 0)
-        return(a);
-    else if (i == 1)
-        return(b);
-    else
-    {
-        int c = a + b;
-        a = b;
-        b = c;
-        return(c);
-    }
+	int i;
+	for (i = 0; i < N; i++)
+	{
+		if (j == 0)
+		{
+			return(a);
+		}
+		else if (j == 1)
+		{
+			return(b);
+		}
+		else
+		{
+			int c = a + b;
+			a = b;
+			b = c;
+		return(c);
+		}
+	}
 }
 
 
