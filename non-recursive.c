@@ -40,7 +40,7 @@ int main(void)
    
     clock_t begin, end;
     double time_spent;
-    begin == clock();
+    begin = clock();
 
     for(i = 0; i < N; i++)
     {
