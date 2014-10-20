@@ -6,28 +6,22 @@
 /*non-recursive*/
 
 long fibonacci(int);
-int a = 0;
-int b = 1;
+int a[N];
+int a[0] = 0;
+int a[1] = 1;
 
-long fibonacci(j)
+long fibonacci(i)
 {
-	int i;
-	for (i = 0; i < N; i++)
+	for (j = 0; j < i; i++)
 	{
-		if (j == 0)
+		if (j == 0 || j == 1)
 		{
-			return(a);
-		}
-		else if (j == 1)
-		{
-			return(b);
+			return (a[j]);
 		}
 		else
 		{
-			int c = a + b;
-			a = b;
-			b = c;
-		return(c);
+			a[j] = a[j-1] + a[j-2];
+			return (a[j]);
 		}
 	}
 }
@@ -37,7 +31,7 @@ int main(void)
 {
     int i;
     long l;
-   
+    
     clock_t begin, end;
     double time_spent;
     begin = clock();
