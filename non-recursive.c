@@ -6,24 +6,31 @@
 /*non-recursive*/
 
 long fibonacci(int);
-int a[N];
-int a[0] = 0;
-int a[1] = 1;
 
+	
 long fibonacci(i)
 {
-	for (j = 0; j < i; i++)
+	int a = 0, b = 1, c;
+	int j;
+	
+	for (j = 1; j < i; j++)
 	{
-		if (j == 0 || j == 1)
+		if ( i == 0)
 		{
-			return (a[j]);
+			c = a;
 		}
-		else
+		else if ( i == 1)
 		{
-			a[j] = a[j-1] + a[j-2];
-			return (a[j]);
+			c = b;
+		}
+		else if ( i >= 2)
+		{
+			c = a + b;
+			a = b;
+			b = c;
 		}
 	}
+	return c;
 }
 
 
